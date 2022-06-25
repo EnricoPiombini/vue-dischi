@@ -1,14 +1,19 @@
 <template>
-    <div class="container">
+    <div>
+        <main>
+            <div class="container">
 
 
-        <div class="row">
-            <div class="col-3" v-for="disc in albumInfo" :key="disc.author">
-                <TheSingleDisc :author-name="disc">
+                <div class="row row-cols-5">
+                    <div class="col" v-for="disc in albumInfo" :key="disc.author">
+                        <TheSingleDisc :author-name="disc">
 
-                </TheSingleDisc>
+                        </TheSingleDisc>
+                    </div>
+
+                </div>
             </div>
-        </div>
+        </main>
     </div>
 
 
@@ -51,4 +56,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+main {
+
+    background-color: #1E2D3B;
+
+    .container {
+
+        padding-top: 3rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
 </style>

@@ -1,14 +1,10 @@
 <template>
-    <div>
-        <div class="card">
-            <div class="card-body">
-                <img :src="authorName.poster" alt="" class="w-100">
-                <h5> {{ authorName.title }} </h5>
-                <p>{{ authorName.author }} {{ authorName.year }}  </p>
-                
-            </div>
-        </div>
+    <div class="content text-center">
 
+        <img :src="authorName.poster" alt="" class="w-100">
+        <h5 class="text-white fw-bold text-uppercase"> {{ authorName.title }} </h5>
+        <p>{{ authorName.author }} </p>
+        <p>{{ authorName.year }}</p>
     </div>
 
 </template>
@@ -25,5 +21,8 @@ export default {
 </script>
 
 
-<style>
+<style lang="scss" scoped>
+.content {
+    background-color: #37374B;
+}
 </style>
