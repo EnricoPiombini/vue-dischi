@@ -26,6 +26,7 @@ header {
     .logo {
         height: 40px;
         width: 40px;
+        
 
     }
 }

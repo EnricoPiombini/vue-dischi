@@ -1,10 +1,10 @@
 <template>
     <div class="content text-center">
 
-        <img :src="authorName.poster" alt="" class="w-100">
-        <h5 class="text-white fw-bold text-uppercase"> {{ authorName.title }} </h5>
-        <p>{{ authorName.author }} </p>
-        <p>{{ authorName.year }}</p>
+        <img :src="info.poster" alt="" class="w-100">
+        <h5 class="text-white fw-bold text-uppercase"> {{ info.title }} </h5>
+        <p>{{ info.author }} </p>
+        <p>{{ info.year }}</p>
     </div>
 
 </template>
@@ -12,7 +12,7 @@
 <script>
 export default {
     props: {
-        authorName: Object,
+        info: Object,
     },
     name: "TheDisc",
 
