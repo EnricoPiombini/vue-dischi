@@ -5,7 +5,7 @@
                 <div class="logo">
                     <img src="../assets/logo.png" alt="" class="w-100">
                 </div>
-
+                <TheSearchBar :PickGenreList ="PickGenreList" @searchGenre="$emit('searchGenre, $event')"></TheSearchBar>
             </div>
         </header>
 
@@ -15,9 +15,26 @@
 </template>
 
 <script>
+import TheSearchBar from "./TheSearchBar.vue";
+
+export default {
+    components: { TheSearchBar },
+    props: {
+        PickGenreList : Array,
+     },
+
+    data(){
+        return{
+            
+        }
+    }
+};
+
+
 
 
 </script>
+
 
 <style lang="scss" scoped>
 header {
@@ -26,7 +43,6 @@ header {
     .logo {
         height: 40px;
         width: 40px;
-        
 
     }
 }

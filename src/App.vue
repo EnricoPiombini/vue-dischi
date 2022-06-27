@@ -1,7 +1,7 @@
 <template>
   <div>
-    <TheHeader/>
-    <TheAlbumList></TheAlbumList>
+    <TheHeader :PickGenreList="PickGenreList" @searchGenre="onSearchGenre"></TheHeader>
+    <TheAlbumList @genresUpdated="onGenresUpdated" @searchGenre="onSearchGenre"></TheAlbumList>
   </div>
 </template>
 
@@ -14,7 +14,29 @@ export default {
   components: {
     TheAlbumList,
     TheHeader
-}
+  },
+  props: {
+
+  },
+
+
+  data() {
+    return {
+      PickGenreList: [],
+      searchGenre: ""
+    }
+
+  },
+  methods: {
+    onGenresUpdated(PickGenreList) {
+      console.log(PickGenreList);
+      this.PickGenreList = PickGenreList
+
+    },
+    onSearchGenre(genre) {
+      this.searchGenre = genre
+    }
+  }
 }
 </script>
 
@@ -25,6 +47,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
- height: 100vh;
+  height: 100vh;
 }
 </style>

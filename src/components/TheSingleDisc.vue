@@ -15,14 +15,13 @@ export default {
         info: Object,
     },
     name: "TheDisc",
-
 }
-
 </script>
 
 
 <style lang="scss" scoped>
 .content {
     background-color: #37374B;
+    height: 100%;
 }
 </style>
